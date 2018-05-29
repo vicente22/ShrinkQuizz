@@ -1,6 +1,7 @@
 package cl.vicentepc.shrinkquizz;
 
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -55,11 +56,13 @@ public class LuckyFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean answer = mood.isChecked();
-                Log.d("ANSWER",String.valueOf(answer));
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("Lucky Date or not");
+                //mood is checked tiene la respuesta del usuario
+                alertDialog.setMessage(new LuckyResult(mood.isChecked()).userAnswerResult());
+                alertDialog.show();
             }
         });
 
     }
-
 }

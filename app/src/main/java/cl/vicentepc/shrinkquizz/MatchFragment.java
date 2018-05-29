@@ -1,6 +1,7 @@
 package cl.vicentepc.shrinkquizz;
 
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -86,6 +87,13 @@ public class MatchFragment extends Fragment {
             public void onClick(View v) {
                 int user = userSb.getProgress();
                 int lover = loverSb.getProgress();
+
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("Lucky Date or not");
+                //mood is checked tiene la respuesta del usuario
+                alertDialog.setMessage(new MatchResult().matchResult(user,lover));
+                alertDialog.show();
+
             }
         });
 

@@ -12,6 +12,4 @@ public class PartyAnswer {
         return answer;
     }
 
-
-
 }

@@ -30,27 +30,12 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:tabIndicatorHeight="3dp"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabTextColor="#FFF"
+            app:tabSelectedTextColor="@color/colorAccent"/>
 
-            <android.support.design.widget.TabItem
-                android:id="@+id/tabItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PARTY" />
-
-            <android.support.design.widget.TabItem
-                android:id="@+id/tabItem2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MATCH" />
-
-            <android.support.design.widget.TabItem
-                android:id="@+id/tabItem3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LUCKY" />
-
-        </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager
